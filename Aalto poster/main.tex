@@ -1,4 +1,5 @@
 % This work is inspired by \title{Aalto poster} \author{Juho Rousu}
+% I must suggest you take a look on Juho Rousu poster for a good view of various logo options.
 \documentclass[landscape,a0,final]{a0poster} % a0poster class sets the paper size
 %\pdfobjcompresslevel=2
 \usepackage[utf8]{inputenc}
@@ -12,24 +13,9 @@
 %\usepackage{titlesec} % For changing the font on chapters, sections, etc.
 \usepackage{float} % Improved interface for floating objects
 
-%% Section font size reduction for a1 posters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Also changes the format to sans serif bold, i.e. bold Helvetica via aaltologo package, can change the color of section text
-
-%\titleformat{\section}{\large\bfseries\sffamily\color{aaltoFuchsia}}{\textcolor{aaltoFuchsia}{\thesection}}{1em}{} % Text size for a1 posters
-
-% \titleformat{\section}{\large\bfseries\sffamily\color{aaltoBlack}}{\textcolor{aaltoBlack}{\thesection}}{1em}{} % Text size for a1 posters
-
-%\titleformat{\section}{\large\bfseries\sffamily}{\thesection.}{1em}{} % Text size for a1 posters with a dot after the incremental number
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \usepackage{epstopdf} % so that ``pdflatex'' accepts .eps files
-
-
-% Safe alternative math font for aaltoseries (optional)
-\usepackage{fouriernc}
 
 \usepackage{todonotes}
 % Teach hyphenation for alien words
@@ -56,14 +42,8 @@
 \newcommand{\unitx}{\ensuremath{\vt{x}_0}}
 \newcommand{\unity}{\ensuremath{\vt{y}_0}}
 
-
-
-
-
-
 \newcommand{\sectionspace}{10mm} % Free space before each section inside a minipage
 \newcommand{\figurespace}{10mm} % Free space around figures inside a minipage (where floats are not allowed)
-
 
 \usepackage[skins]{tcolorbox}
 \newtcolorbox{myframe}[2][]{%
@@ -78,14 +58,7 @@
 
 \begin{document}
 
-
-
-
-
-
 \thispagestyle{empty} % Removes the page number
-
-
 
 
 \begin{minipage}[t]{0.98\linewidth} % The first minipage for the logo & title
@@ -99,49 +72,12 @@
 %% Choose the logo or use random generator
 %\AaltoLogoLarge{1.55}{''}{aaltoBlue} % Chosen logo, scaled for A1 size
 %\AaltoLogoRandomLarge{1.55} % Random logo, scaled for A1 size
-\AaltoLogoLarge{1.55}{''}{aaltoBlack}
-
-
+%\AaltoLogoLarge{1.55}{''}{aaltoBlack}
 
 \end{minipage} % no empty line before the next begin
 \begin{minipage}[t]{0.72\linewidth} % title
 \vspace{0pt} % Alingns the parallel minipages on top
 
-
-%% Font sizes for a0poster are
-%\tiny
-%\scriptsize
-%\footnotesize
-%\small
-%\normalsize
-%\large
-%\Large
-%\LARGE
-%\huge
-%\Huge
-%\veryHuge
-%\VeryHuge
-%\VERYHuge
-
-%% Official colors from aaltologo-package (visual-identity guideline)
-% aaltoBlack
-% aaltoGray
-% aaltoGrayScale (for b&w prints)
-% aaltoYellow
-% aaltoOrange
-% aaltoRed
-% aaltoFuchsia
-% aaltoPurple
-% aaltoBlue
-% aaltoTurquoise
-% aaltoGreen
-% aaltoLightGreen
-% You can use \textcolor{<aaltocolor>}{<your text>) to change the colors of text, or
-
-%% Aalto-fancy title, use \baselinestretch to change linespacing, \textit{} for italic text, \textcolor for colored text
-%{\renewcommand{\baselinestretch}{0.6} % Changes the baseline skip smaller for the title
-%\textcolor{aaltoGreen}{\veryHuge{\bfseries{\textsf{The title of the poster\\ that can} \textit{span\\ to multiple rows}}}} % Text size for a1 posters
-%\par} % <- for \baselinestretch
 
 % More conservative title, upright and black
 {\renewcommand{\baselinestretch}{0.85} % Changes the baseline skip smaller for the title
@@ -181,31 +117,13 @@
 \vspace{\sectionspace}
 
 
-
-% \section{AaltoSEA}
-% %\begin{myframe}{Features}
-%     \begin{itemize}
-%        \item  We focus on service engineering analytics for distributed software systems, big data applications, machine learning systems, and IoT.
-%        \item  AaltoSEA also contributes to the Aalto Center for Autonomous Systems and explores software and services analytics in the context of quantum computing through collaboration with The Finnish Quantum Institute.
-       
-%        \item Current courses: Big Data Platforms and Advanced Topics in Software Systems
-       
-%        %\item  Engineering analytics involves designing, monitoring, analyzing, explaining, and optimizing system performance, data quality, elasticity, and handling uncertainties in systems, software, data, and services.
-       
-%        %\item  These techniques are applied to various practical applications, which are detailed in presentations and publications by the group.
-    
-%     \end{itemize}
-
 \section{QoA4ML -- Quality-of-Analytics for Machine Learning Library}
 %\vspace{\figurespace}
-% \begin{center}
-%   \includegraphics[width=0.45\linewidth]{./figs/chiral_particles_v2.eps}
-% \end{center}
+
 \begin{center}
     
 \includegraphics[width=0.9\linewidth]{./figs/QoA4ML-QR.pdf}
 \end{center}
-%Important service-level constraints in machine learning (ML) services must be communicated and agreed among relevant stakeholders. Due to the lack of studies and support, it is unclear which and how ML-specific attributes and constraints should be specified and assured in service contracts for ML services. This paper examines service contracts in the three stakeholders engagement model of ML services. We identify key ML-specific attributes that should be specified and monitored for the ML service provider, ML consumer and ML infrastructure provider. Based on that, we propose QoA4ML (Quality of Analytics for ML) as a framework to support ML-specific service contracts. QoA4ML includes an ML-specific service contract specification, monitoring utilities and a contract observability service. To illustrate the usefulness of QoA4ML, we present real-world examples for contract terms and policies, monitoring and contract evaluation with dynamic ML services in predictive maintenance.
 \begin{myframe}{Motivation}
     Which ML-specific attributes and constraints should be specified and assured in service contracts for ML services, and how can they be effectively communicated and monitored among relevant stakeholders?
 \end{myframe}
@@ -222,11 +140,8 @@
 
 \end{myframe}
 \section{Analytics of Programming and Service Models for Hybrid Quantum Computing Software}
-%\todo[inline]{Debayan add data here}
-%\includegraphics[width=0.1\linewidth]{./figs/Debayan.pdf}
+
 \begin{center}
-%\includegraphics[width=0.9\linewidth]{./figs/debayan hcq v1.pdf}
-%\includegraphics[clip,trim=1cm 4cm 3cm 2cm,width=\linewidth]{./figs/debayan hcq v2.pdf}
 
 \includegraphics[width=\linewidth]{./figs/debayan2.pdf}
 \end{center}
@@ -262,16 +177,6 @@
 
 
 \end{myframe}
-% \section{}
-% \includegraphics[width=\linewidth]{./figs/devices.jpeg}
-% % The Digital Twin (DT) paradigm has been largely adopted for many smart systems in various domains. Due to the heterogeneous and distributed nature of the physical twins, these systems increasingly incorporate disparate security tools, especially those based on service-based AI/ML capabilities. That presents numerous challenges in achieving a comprehensive understanding of security analytics and explainability in security operations carried out by ML-based security services, which require continuous monitoring and optimization to remain effective. This paper aims to support security service integration and automated analyses with enhanced explainability in DTs. We introduce a novel framework that unifies runtime contexts to facilitate security services unification and operation interpretation in security orchestration. We define a workflow and provide necessary services for generating security reports across physical and logical layers. Leveraging a centralized knowledge service, we let security analysts incorporate domain knowledge in automating incident reasoning and security enforcement at the logical layer. We demonstrate our explainability framework on a DT of an Industry 4.0 toy factory with two ML-based security services detecting network anomalies. Our experiments show a significant reduction in manual effort for orchestrating security incident analysis and mitigation.
-% \begin{myframe}{Clusters}
-%     \begin{itemize}
-%         \item \textbf{Raspberry Pi Cluster:} Pi 4B/5 with Hailo/Coral AI accelerator
-%         \item \textbf{x86 Cluster:} Beelink BT3, HP Z240, and DellPrecision 5820 Tower 
-%         \item \textbf{Nvidia GPU Cluster:} Jetson Orin/AGX Xavier/Nano
-%     \end{itemize}
-% \end{myframe}
 
 % The end of the first column and the start of the second
 \end{minipage} % no empty line before the next ``\begin''
@@ -295,12 +200,9 @@
     \item Provided practical analyses on runtime monitoring metrics to detect and mitigate resource contentions, ensuring consistent performance.
 \end{itemize}
 \end{myframe}
-%\vspace{\sectionspace}
+
 \subsection*{Experimental results}
-% \begin{itemize}
-% 	\item \lipsum[5]
-% 	\item \lipsum[6]
-% \end{itemize}
+
 \begin{center}
 \includegraphics[width=0.8\linewidth]{./figs/late_res.pdf}
 \end{center}
@@ -322,7 +224,6 @@
 \begin{center}
 \includegraphics[width=0.9\linewidth]{./figs/RXOM-RQ.pdf}
 \end{center}
-% The Digital Twin (DT) paradigm has been largely adopted for many smart systems in various domains. Due to the heterogeneous and distributed nature of the physical twins, these systems increasingly incorporate disparate security tools, especially those based on service-based AI/ML capabilities. That presents numerous challenges in achieving a comprehensive understanding of security analytics and explainability in security operations carried out by ML-based security services, which require continuous monitoring and optimization to remain effective. This paper aims to support security service integration and automated analyses with enhanced explainability in DTs. We introduce a novel framework that unifies runtime contexts to facilitate security services unification and operation interpretation in security orchestration. We define a workflow and provide necessary services for generating security reports across physical and logical layers. Leveraging a centralized knowledge service, we let security analysts incorporate domain knowledge in automating incident reasoning and security enforcement at the logical layer. We demonstrate our explainability framework on a DT of an Industry 4.0 toy factory with two ML-based security services detecting network anomalies. Our experiments show a significant reduction in manual effort for orchestrating security incident analysis and mitigation.
 \begin{myframe}{Research questions}
   How can we enhance the explainability and integration of ML-based security services within Digital Twins (DTs) to improve security operations in heterogeneous and distributed smart systems?
 \end{myframe}
@@ -331,7 +232,6 @@
     \item Introduced a novel framework that unifies runtime contexts for better integration and interpretation of security services in DTs.
     \item Developed a workflow and necessary services to generate security reports across physical and logical layers.
     \item Utilized a centralized knowledge service to allow security analysts to incorporate domain knowledge for automating incident reasoning and security enforcement.
-    %\item Demonstrated the framework on a DT of an Industry 4.0 toy factory, showing a significant reduction in %manual effort for orchestrating security incident analysis and mitigation.
 \end{itemize}
 \end{myframe}
 
@@ -348,7 +248,7 @@
 \begin{center}
 \includegraphics[width=0.7\linewidth]{./figs/image.jpeg}
 \end{center}
-% The Digital Twin (DT) paradigm has been largely adopted for many smart systems in various domains. Due to the heterogeneous and distributed nature of the physical twins, these systems increasingly incorporate disparate security tools, especially those based on service-based AI/ML capabilities. That presents numerous challenges in achieving a comprehensive understanding of security analytics and explainability in security operations carried out by ML-based security services, which require continuous monitoring and optimization to remain effective. This paper aims to support security service integration and automated analyses with enhanced explainability in DTs. We introduce a novel framework that unifies runtime contexts to facilitate security services unification and operation interpretation in security orchestration. We define a workflow and provide necessary services for generating security reports across physical and logical layers. Leveraging a centralized knowledge service, we let security analysts incorporate domain knowledge in automating incident reasoning and security enforcement at the logical layer. We demonstrate our explainability framework on a DT of an Industry 4.0 toy factory with two ML-based security services detecting network anomalies. Our experiments show a significant reduction in manual effort for orchestrating security incident analysis and mitigation.
+
 \begin{myframe}{Clusters}
     \begin{itemize}
         \item \textbf{Raspberry Pi Cluster:} Pi 4B/5 with Hailo/Coral AI accelerator
@@ -357,53 +257,9 @@
     \end{itemize}
 \end{myframe}
 
-% %{\tiny % % Bibliography text size begins...
-% {\footnotesize % % Bibliography text size begins...
-% \bibliographystyle{ieeetr}
-% \bibliography{main}
-% % \begin{thebibliography}{1}
-
-% % \bibitem{Tretyakov1996}
-% % S.~A. Tretyakov, F.~Mariotte, C.~R. Simovski, T.~G. Kharina, and J.~P. Heliot,
-% %   ``Analytical antenna model for chiral scatterers: comparison with numerical
-% %   and experimental data,'' \emph{{IEEE} Trans. Antennas Propag.}, vol.~44,
-% %   no.~7, pp. 1006--1014, 1996.
-  
-% % \end{thebibliography}
-% } % <- bibliography text size ends
-% \begin{center}
-    
-% \includegraphics[width=0.6\linewidth]{Aalto poster/figs/qrcode-AaltoSEA.pdf}
-% \end{center}
 \end{minipage}
 \end{minipage} % minipage for the two columns (minipages)
 
-%\vfill % Fill the free space until the footer minipages
-% \begin{minipage}{0.95\linewidth} % Minipages for the footers
-
-
-% \footnotesize % Text size for footers
-
-
-% \begin{minipage}[t]{0.3\linewidth}% Footer #1
-% \vspace{0pt}
-
-% \textsf{The Aalto Systems and Services Engineering Analytics,
-% School of Science, Aalto University, Finland}
-
-% \end{minipage} % No empty line before the second begin!
-% \hspace{0.03\linewidth}
-% %\begin{minipage}[t]{0.35\linewidth}
-% % \begin{center}
-% % \includegraphics[width=0.4\linewidth]{Aalto poster/figs/qrcode-AaltoSEA.pdf}
-% % \end{center}
-% % \end{minipage}
-% \begin{minipage}[t]{0.47\linewidth} % Footer #2
-% \vspace{0pt}
-% %\textsf{Hong-Tri Nguyen, Minh-Tri Nguyen, Debayan Bhattacharya, Anh-Dung Nguyen, Hong-Linh Truong}%, Email: \{firstname.lastname\}@aalto.fi}
-% \end{minipage}
-
-% \end{minipage}
 
 \vspace*{0.01\linewidth} % Increase the bottom margins
 
